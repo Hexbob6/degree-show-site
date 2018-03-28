@@ -17,6 +17,7 @@
 - Middle Grey   =   #d1d3d4
 */
 
+/*#############################*/
 
 /*#############################*/
 
@@ -458,6 +459,7 @@ footer {
 footer hr {
     width: 75px;
     margin: 1.2em auto 1.2em 0;
+/*    margin: 1.2em auto;*/
 }
 
 .footer-right hr:last-child {
@@ -480,17 +482,24 @@ footer hr {
     margin: 0 auto;
     width: 90%;
     max-width: 800px;
+    text-align: left;
 }
 
 .footer-left {
+/*    min-width: 250px;*/
+/*    border: 1px solid black;*/
     padding-right: 1em;
 }
 
 .footer-centre {
+/*    min-width: 200px;*/
+/*    border: 1px solid black;*/
     padding-right: 1em;
 }
 
 .footer-right {
+/*    width: 100%;*/
+/*    min-width: 220px;*/
 }
 
 /*#############################*/

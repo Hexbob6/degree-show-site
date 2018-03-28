@@ -42,7 +42,8 @@ $(window).on("load resize", function () {
     // Gets height of the window
     var screenWidth = $(window).width(),
         screenHeight = $(window).height(),
-        screenSize = screenWidth + ' x ' + screenHeight;
+        //Compensates for chrome scrollbar (17px)
+        screenSize = (screenWidth + 17) + ' x ' + screenHeight;
     
     // Gives <main> a margin bottom height to reveal the footer
     var footerHeight = $('footer').height();
