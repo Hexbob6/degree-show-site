@@ -19,12 +19,6 @@ $(window).on("load resize", function () {
     $('.featured-student-content').css({'height' : featuredStudentContentHeight + 'px'});
     
     
-    // Gives <main> a margin bottom height to reveal the footer
-    var footerHeight = $('footer').height();
-    
-    $('main').css({'margin-bottom' : footerHeight + 'px'});
-    
-    
     // Checks if student images are landscape or portrait and scales accordingly
     $(".student-work img").each(function () {
         
@@ -44,6 +38,37 @@ $(window).on("load resize", function () {
             $(this).css({'max-width' : '600px'});
         }
     });
+    
+    // Gets height of the window
+    var screenWidth = $(window).width(),
+        screenHeight = $(window).height(),
+        screenSize = screenWidth + ' x ' + screenHeight;
+    
+    // Gives <main> a margin bottom height to reveal the footer
+    var footerHeight = $('footer').height();
+    
+    
+    // Adjusts the footer so it scrolls on mobile
+    if (footerHeight >= screenHeight) {
+        
+        $('main').css({'margin-bottom' : 0});
+        $('footer').css({
+            'position' : 'relative',
+            'bottom' : 'auto'
+        });
+        
+    } else if (footerHeight < screenHeight) {
+        
+        $('main').css({'margin-bottom' : footerHeight + 'px'});
+        $('footer').css({
+            'position' : 'fixed',
+            'bottom' : '0'
+        });
+        
+    }
+    
+    // Adds the window screensize to the Screensize box
+    $('.screen-size p').html(screenSize);
     
 });
 

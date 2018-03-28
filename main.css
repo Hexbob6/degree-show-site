@@ -20,6 +20,28 @@
 
 /*#############################*/
 
+/* Screensize Widget */
+
+.screen-size {
+    position: fixed;
+    height: auto;
+    width: auto;
+    background-color: #f1f1f1;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.screen-size p {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #515151;
+}
+
+/*#############################*/
+
 /* Initial Styling */
 
 * {
@@ -343,6 +365,7 @@ nav li:nth-child(4) a {color: #ac6cad;}
 
 main {
     position: relative;
+    margin: 0 auto;
     width: 100%;
     height: auto;
     min-height: 500px;
@@ -435,7 +458,10 @@ footer {
 footer hr {
     width: 75px;
     margin: 1.2em auto 1.2em 0;
+}
 
+.footer-right hr:last-child {
+    margin-bottom: 2em;
 }
 
 .footer-title {
