@@ -78,7 +78,7 @@ hr {
     display: block;
     height: 2px;
     border: none;
-    background-image: url(img/brand_elements/dividing_line_01.png)
+    background-image: url(img/brand_elements/dividing_line_01.png);
     background-size: auto 100%;
     background-position: center left;
     background-repeat: repeat-x;
@@ -293,7 +293,7 @@ nav {
     position: relative;
     margin: 0;
     padding: 40px 0;
-    font-size: 18px;
+    font-size: 1.125em; /* 18px */
     background-color: #f1f2f2;
     z-index: 900;
 }
@@ -307,9 +307,11 @@ nav ul {
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
+    text-align: center;
 }
 
 nav li a {
+    padding-right: 1em;
     display: block;
     padding: none;
     text-decoration: none;
@@ -320,18 +322,19 @@ nav li a:hover {
 }
 
 nav li span {
-    padding: 0 15px;
+    padding-right: 1em;
     color: #414042;
 }
 
-nav li:first-child span {padding-left: 0;}
 
+/*
 nav li:nth-child(1) a {color: #414042;}
 nav li:nth-child(6) a {color: #ef5451;}
 nav li:nth-child(5) a {color: #fcb64e;}
 nav li:nth-child(2) a {color: #81c784;}
 nav li:nth-child(3) a {color: #5ac7da;}
 nav li:nth-child(4) a {color: #ac6cad;}
+*/
 
 
 /*#############################*/
@@ -351,7 +354,7 @@ main {
 section {
     display: flex;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 1.250em; /* 20px */
     width: 90%;
     max-width: 1000px;
     flex-wrap: wrap;
@@ -361,7 +364,7 @@ section {
 
 .featured-student-box {
     display: block;
-    padding-bottom: 20px;
+    padding-bottom: 1.250em;
     width: 25%;
     min-width: 200px;
 }
@@ -382,7 +385,7 @@ section {
     display: block;
     padding: 10px;
     color: #414042;
-    font-size: 24px;
+    font-size: 1.5em; /* 24px */
     font-weight: 600;
     letter-spacing: -1px;
     text-transform: uppercase;
@@ -422,6 +425,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 1em;
     background-color: #e6e7e8;
     overflow: hidden;
     color: #414042;
@@ -439,7 +443,7 @@ footer hr {
     margin: 1.5em auto;
     width: 90%;
     max-width: 800px;
-    font-size: 22px;
+    font-size: 1.375em; /* 22px */
     text-align: center;
 }
 
@@ -529,12 +533,14 @@ footer hr {
     padding-right: 8px;
 }
 
+/*
 .footer-page-links a:nth-child(1)  {color: #414042;}
 .footer-page-links a:nth-child(6)  {color: #ef5451;}
 .footer-page-links a:nth-child(3)  {color: #fcb64e;}
 .footer-page-links a:nth-child(2)  {color: #81c784;}
 .footer-page-links a:nth-child(5)  {color: #5ac7da;}
 .footer-page-links a:nth-child(4)  {color: #ac6cad;}
+*/
 
 /*#############################*/
 
@@ -544,7 +550,7 @@ footer hr {
     width: 90%;
     max-width: 800px;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875em; /* 14px */
 }
 
 /*#############################*/
@@ -625,7 +631,7 @@ footer hr {
     padding: 10px;
     margin-bottom: 10px;
     color: #414042;
-    font-size: 2.5em;
+    font-size: 2.5em; /* 40px */
     letter-spacing: -1px;
     text-transform: uppercase;
     text-align: center;
@@ -643,7 +649,7 @@ footer hr {
 .student-specialisms a {
     margin: auto;
     padding: 0 1em 0.2em 0;
-    font-size: 18px;
+    font-size: 1.125em; /* 18px */
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -722,13 +728,13 @@ blockquote {
     max-width: 750px;
     font-style: italic;
     text-align: center;
-    font-size: 2em;
+    font-size: 2em; /* 32px */
 /*    border: 1px solid black;*/
 }
 
 .quote-author {
     margin: 0 auto 40px auto;
-    font-size: 1.2em;
+    font-size: 1.125em; /* 18px */ 
     font-style: italic;
 /*    border: 1px solid black;*/
 }
@@ -737,6 +743,7 @@ blockquote {
 	width: 100%;
     margin: 0 auto;
     max-width: 700px;
+    font-size: 1em;
     text-align: justify;
     text-align-last: center;
 /*    border: 1px solid black;    */
