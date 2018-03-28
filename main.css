@@ -275,6 +275,7 @@ header {
 .header-content {
     position: relative;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     margin: 0 auto;
     width: 100%;
@@ -290,11 +291,19 @@ header {
 }
 
 .header-content-video video {
-    position: relative;
     display: block;
+    position: relative;
     height: 200%;
     margin: 0 auto;
     background-color: transparent;
+}
+
+.header-content-video img {
+    display: none;
+    position: relative;
+    height: 200%;
+    margin: 0 auto;
+/*    border: 1px solid black;*/
 }
 
 .header-content-logo {
@@ -319,6 +328,7 @@ nav {
     font-size: 1.125em; /* 18px */
     background-color: #f1f2f2;
     z-index: 900;
+    border: 1px solid black;
 }
 
 nav ul {
@@ -372,6 +382,7 @@ main {
     min-height: 500px;
     background-color: #f1f2f2;
     z-index: 1000; /* Puts content above <nav> */
+    overflow: auto;
 /*    border: 1px solid black;*/
 }
 
@@ -486,20 +497,17 @@ footer hr {
 }
 
 .footer-left {
-/*    min-width: 250px;*/
 /*    border: 1px solid black;*/
     padding-right: 1em;
+    margin-bottom: 2em;
 }
 
 .footer-centre {
-/*    min-width: 200px;*/
 /*    border: 1px solid black;*/
     padding-right: 1em;
 }
 
 .footer-right {
-/*    width: 100%;*/
-/*    min-width: 220px;*/
 }
 
 /*#############################*/
