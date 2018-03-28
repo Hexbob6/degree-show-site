@@ -134,6 +134,9 @@ $(document).click(function () {
 });
 
 
+
+
+
 $(document).ready(function () {
         
     "use strict";
@@ -144,13 +147,19 @@ $(document).ready(function () {
             
         isMobile = true;
     }
-
-
-    if (isMobile) {
+    
+    var mobileScreenWidth = $(window).width();
+    
+    if (isMobile && (mobileScreenWidth <= 767)) {
         
-        // For the whole HTML Document
+        // Makes header videos display as images
         $(".header-content-video video").css({'display': 'none'});
         $(".header-content-video img").css({'display': 'block'});
+        
+        $('.screen-size p').append("<span>This is mobile</span>");
+        
+    } else {
+        $('.screen-size span').html("This is not mobile.");
     }
     
 });
