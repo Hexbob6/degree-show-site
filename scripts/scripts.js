@@ -310,15 +310,15 @@ $(document).ready(function () {
     
     if (isMobile && (mobileScreenWidth < 768)) {
         
-        alert('This is mobile');
+//        alert('This is mobile');
         
         // Makes header videos display as images
         $(".header-content-video video").css({'display': 'none'});
         $(".header-content-video img").css({'display': 'block'});
         $(".student-header-video-wrapper video").css({'display': 'none'});
         $(".video-replacement-image").css({'display': 'block'});
-        $(".header-content-video>video").css({'display': 'none'});
-        $(".header-content-video>img").css({'display': 'block'});
+        $(".mobile-header-lines>video").css({'display': 'none'});
+        $(".mobile-header-lines>img").css({'display': 'block'});
         
         
         $('.screen-size p').append("<span>This is mobile</span>");
@@ -326,7 +326,7 @@ $(document).ready(function () {
     } else {
         
         $('.screen-size span').html("This is not mobile.");
-        alert('This isn\'t mobile');
+//        alert('This isn\'t mobile');
     }
     
 });

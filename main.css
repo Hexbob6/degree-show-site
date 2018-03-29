@@ -54,6 +54,15 @@
     background: #5ac7da;
 }
 
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 .drop-shadow {
     box-shadow: 0 8px rgba(88,89,91,0.5);
 }
