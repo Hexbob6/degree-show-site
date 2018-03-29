@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 
 // Event Handlers that require updating on page load and resize
-$(window).on("load resize", function () {
+$(window).on("ready load resize", function () {
 
     "use strict";
     
