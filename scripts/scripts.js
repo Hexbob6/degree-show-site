@@ -52,7 +52,15 @@ $(window).on("ready load resize", function () {
     
     
     // Adjusts the footer so it scrolls on mobile
-    if (footerHeight >= screenHeight) {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+        
+        $('main').css({'margin-bottom' : 0});
+        $('footer').css({
+            'position' : 'relative',
+            'bottom' : 'auto'
+        });
+        
+    } else if (footerHeight >= screenHeight) {
         
         $('main').css({'margin-bottom' : 0});
         $('footer').css({
