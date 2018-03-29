@@ -1,3 +1,5 @@
+var console;
+
 // Displays the loading icon until page is fully loaded
 $(document).ready(function () {
     
@@ -155,6 +157,8 @@ $(document).ready(function () {
         // Makes header videos display as images
         $(".header-content-video video").css({'display': 'none'});
         $(".header-content-video img").css({'display': 'block'});
+        $(".student-header-video-wrapper video").css({'display': 'none'});
+        $(".video-replacement-image").css({'display': 'block'});
         
         $('.screen-size p').append("<span>This is mobile</span>");
         
@@ -164,3 +168,180 @@ $(document).ready(function () {
     
 });
 
+
+$(document).ready(function () {
+    
+    "use strict";
+    var pageBody = $('body'),
+        headerVideo = $('.student-header-video-wrapper'),
+        studentSpecialsims = $('.student-specialisms');
+    
+    var linesLeftCDME =
+        '<video class="vertical-align" autoplay><source     src="vid/Course_Lines/CDME_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/CDME_student_lines_left1.png">',
+        linesRightCDME =
+        '<video class="vertical-align" autoplay><source src="vid/Course_Lines/CDME_page-lines-right_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/CDME_student_lines_right1.png">',
+        cdmeSpecialism = '<a href="" class="blue-font"><span>//</span>Creative Digital Media</a>';
+    
+    var linesLeftANIM =
+        '<video class="vertical-align" autoplay><source     src="vid/Course_Lines/ANIM_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/ANIM_student_lines_left1.png">',
+        linesRightANIM =
+        '<video class="vertical-align" autoplay><source src="vid/Course_Lines/ANIM_page-lines-right_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/ANIM_student_lines_right1.png">',
+        animSpecialism = '<a href="" class="green-font"><span>//</span>Animation</a>';
+        
+    var linesLeftGDES =
+        '<video class="vertical-align" autoplay><source     src="vid/Course_Lines/GDES_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/GDES_student_lines_left1.png">',
+        linesRightGDES =
+        '<video class="vertical-align" autoplay><source src="vid/Course_Lines/GDES_page-lines-right_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/GDES_student_lines_right1.png">',
+        gdesSpecialism = '<a href="" class="purple-font"><span>//</span>Graphic Design</a>';
+    
+    var linesLeftILLU =
+        '<video class="vertical-align" autoplay><source     src="vid/Course_Lines/ILLU_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/ILLU_student_lines_left1.png">',
+        linesRightILLU =
+        '<video class="vertical-align" autoplay><source src="vid/Course_Lines/ILLU_page-lines-right_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/ILLU_student_lines_right1.png">',
+        illuSpecialism = '<a href="" class="yellow-font"><span>//</span>Illustration</a>';
+    
+    var linesLeftART =
+        '<video class="vertical-align" autoplay><source     src="vid/Course_Lines/ART_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/ART_student_lines_left1.png">',
+        linesRightART =
+        '<video class="vertical-align" autoplay><source src="vid/Course_Lines/ART_page-lines-right_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/ART_student_lines_right1.png">',
+        artSpecialism = '<a href="" class="red-font"><span>//</span>Fine Art &amp Art and Design</a>';
+        
+    
+    // Course Classes 
+    // - anim
+    // - illust
+    // - cdme
+    // - graphics
+    // - fine-art
+    
+    if (pageBody.hasClass('cdme') && pageBody[0].classList.length === 1) {
+        
+        headerVideo.append(linesLeftCDME, linesRightCDME);
+        studentSpecialsims.append(cdmeSpecialism);
+        
+        console.log("CDME");
+        
+        
+    } else if (pageBody.hasClass('graphics') && pageBody[0].classList.length === 1) {
+        
+        headerVideo.append(linesLeftGDES, linesRightGDES);
+        studentSpecialsims.append(gdesSpecialism);
+        
+        console.log("GDES");
+        
+    } else if (pageBody.hasClass('illust') && pageBody[0].classList.length === 1) {
+
+        headerVideo.append(linesLeftILLU, linesRightILLU);
+        studentSpecialsims.append(illuSpecialism);
+        
+        console.log("ILLU");
+
+    } else if (pageBody.hasClass('fine-art') && pageBody[0].classList.length === 1) {
+
+        headerVideo.append(linesLeftART, linesRightART);
+        studentSpecialsims.append(artSpecialism);
+        
+        console.log("ART");
+
+    } else if (pageBody.hasClass('anim') && pageBody[0].classList.length === 1) {
+
+        headerVideo.append(linesLeftANIM, linesRightANIM);
+        studentSpecialsims.append(animSpecialism);
+
+        console.log("ANIM");
+
+    } else if ((pageBody.hasClass('anim')) && (pageBody.hasClass('illust'))) {
+
+        headerVideo.append(linesLeftANIM, linesRightILLU);
+        studentSpecialsims.append(animSpecialism, illuSpecialism);
+
+        console.log("ANIM ILLU");
+        
+    } else if ((pageBody.hasClass('anim')) && (pageBody.hasClass('cdme'))) {
+
+        headerVideo.append(linesLeftCDME, linesRightANIM);
+        studentSpecialsims.append(cdmeSpecialism, animSpecialism);
+
+        console.log("CDME ANIM");
+        
+    } else if ((pageBody.hasClass('anim')) && (pageBody.hasClass('graphics'))) {
+
+        headerVideo.append(linesLeftANIM, linesRightGDES);
+        studentSpecialsims.append(animSpecialism, gdesSpecialism);
+
+        console.log("ANIM GDES");
+        
+    } else if ((pageBody.hasClass('anim')) && (pageBody.hasClass('fine-art'))) {
+
+        headerVideo.append(linesLeftANIM, linesRightART);
+        studentSpecialsims.append(animSpecialism, artSpecialism);
+
+        console.log("ANIM ART");
+        
+    } else if ((pageBody.hasClass('illust')) && (pageBody.hasClass('cdme'))) {
+
+        headerVideo.append(linesLeftCDME, linesRightILLU);
+        studentSpecialsims.append(cdmeSpecialism, illuSpecialism);
+
+        console.log("CDME ILLU");
+        
+    } else if ((pageBody.hasClass('illust')) && (pageBody.hasClass('graphics'))) {
+
+        headerVideo.append(linesLeftILLU, linesRightGDES);
+        studentSpecialsims.append(illuSpecialism, gdesSpecialism);
+
+        console.log("ILLU GDES");
+        
+    } else if ((pageBody.hasClass('illust')) && (pageBody.hasClass('fine-art'))) {
+
+        headerVideo.append(linesLeftILLU, linesRightART);
+        studentSpecialsims.append(illuSpecialism, artSpecialism);
+
+        console.log("ILLU ART");
+        
+    } else if ((pageBody.hasClass('graphics')) && (pageBody.hasClass('cdme'))) {
+
+        headerVideo.append(linesLeftCDME, linesRightGDES);
+        studentSpecialsims.append(cdmeSpecialism, gdesSpecialism);
+
+        console.log("CDME GDES");
+        
+    } else if ((pageBody.hasClass('cdme')) && (pageBody.hasClass('fine-art'))) {
+
+        headerVideo.append(linesLeftCDME, linesRightART);
+        studentSpecialsims.append(cdmeSpecialism, artSpecialism);
+
+        console.log("CDME ART");
+        
+    } else if ((pageBody.hasClass('graphics')) && (pageBody.hasClass('fine-art'))) {
+
+        headerVideo.append(linesLeftGDES, linesRightART);
+        studentSpecialsims.append(gdesSpecialism, artSpecialism);
+
+        console.log("GDES ART");
+        
+    }
+    
+//    if (pageBody.hasClass('cdme')) {
+//        
+//        studentSpecialsims.append(cdmeSpecialism);
+//        
+//    } else if (pageBody.hasClass('graphics')){
+//
+//        studentSpecialsims.append(gdesSpecialism);
+//
+//    } else if (pageBody.hasClass('anim')){
+//
+//        studentSpecialsims.append(animSpecialismSpecialism);
+//
+//    } else if (pageBody.hasClass('illust')){
+//
+//        studentSpecialsims.append(illuSpecialism);
+//
+//    } else if (pageBody.hasClass('fine-art')){
+//
+//        studentSpecialsims.append(artSpecialism);
+//
+//    }
+    
+});
