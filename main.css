@@ -655,6 +655,10 @@ footer hr {
 
 /*#############################*/
 
+/*#############################*/
+
+/* Student Page Header */
+
 .student-page-header {
 /*	height: 500px;*/
 }
@@ -793,6 +797,11 @@ footer hr {
     opacity: 0.5;
 }
 
+
+/*#############################*/
+
+/* Student Conent */
+
 .student-content {
     display: flex;
     flex-direction: column;
@@ -864,4 +873,110 @@ blockquote {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+
+/*#############################*/
+/*##############################################*/
+/*#############################*/
+
+/* HOLDING PAGE TEMPLATE */
+
+/*
+// Course Colours
+- Red           =   #ef5451
+- Yellow        =   #fcb64e
+- Green         =   #81c784
+- Blue          =   #5ac7da
+- Purple        =   #ac6cad
+
+// Greyscale Colours
+- White         =   #f1f2f2
+- Light Grey    =   #e6e7e8
+- Medium Grey   =   #58595b
+- Black         =   #414042
+
+- Middle Grey   =   #d1d3d4
+*/
+
+
+/*#############################*/
+
+/*#############################*/
+
+/* Holding Page Header */
+
+.holding-page-section {
+    padding-top: 3em;
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    text-align-last: center;
+}
+
+.holding-page-section h3 {
+	font-size: 3em;
+    margin: 0;
+}
+
+
+.holding-info p {
+	font-size: 1em;
+    margin: 1.5em auto 2em auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+}
+
+.holding-page-section hr {
+    width: 60%;
+    max-width: 400px;
+/*	border: 5px solid black;*/
+}
+
+
+.show-details {
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.private-view, .public-opening {
+/*	width: calc(50% - 2px);*/
+    width: 49%;
+    min-width: 380px;
+    margin-bottom: 1em;
+/*    border: 1px solid red;*/
+}
+
+.public-opening:last-child {
+	margin-bottom: 0;
+}
+
+.show-details h2 {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 2.5em;
+    margin: 0 auto;
+}
+
+.show-details span {
+    margin: 0 auto;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    display: block;
+    width: 90%;
+    max-width: 600px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.countdown-timer {
+	text-align: center;
 }
