@@ -167,8 +167,6 @@ $(document).ready(function () {
         $(".header-content-video img").css({'display': 'block'});
         $(".student-header-video-wrapper video").css({'display': 'none'});
         $(".video-replacement-image").css({'display': 'block'});
-        $(".mobile-header-lines video").css({'display': 'none'});
-        $(".mobile-header-lines img").css({'display': 'block'});
         
         $('.screen-size p').append("<span>This is mobile</span>");
         

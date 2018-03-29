@@ -319,8 +319,8 @@ header {
 	height: 250%;
 }
 
-.mobile-header-lines img {
-    display: none;
+.mobile-header-lines>img {
+    display: block;
     position: relative;
     margin: 0 auto;
     height: 250%;

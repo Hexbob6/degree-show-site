@@ -78,14 +78,14 @@
         overflow: hidden;
     }
 
-    .mobile-header-lines video {
+    .mobile-header-lines>video {
         display: block;
         position: relative;
         margin: 0 auto;
         height: 250%;
     }
 
-    .mobile-header-lines img {
+    .mobile-header-lines>img {
         display: none;
         position: relative;
         margin: 0 auto;
