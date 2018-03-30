@@ -137,5 +137,15 @@
     .footer-left hr:last-child {
         margin-bottom: 1.2em;
     }
+    
+    .private-view, .public-opening {
+        min-width: 330px;
+        text-align: center;
+    }
+    
+    .public-opening span, .private-view span {
+        text-align: center;
+        font-size: 1.2em;
+    }
 
 }
