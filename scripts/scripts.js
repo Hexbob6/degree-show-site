@@ -151,8 +151,15 @@ $(document).click(function () {
 });
 
 
-$(document).ready(function () {
+// Back Button
+$('.back-button-container').on('click', function () {
     
+    "use strict";
+    window.history.back();
+    
+});
+
+$(document).ready(function () {
     
     // Variables for custom course content
     "use strict";
@@ -347,12 +354,13 @@ $(document).ready(function () {
 
 
 // Countdown timer for holding page
-$(window).on('load', function(e) {
-
+$(window).on('load', function (e) {
+    
+    "use strict";
     var countDownDate = new Date("May 18, 2018 18:00:00").getTime();
     
     // Update the count down every 1 second
-    var x = setInterval(function() {
+    var x = setInterval(function () {
 
         // Get todays date and time
         var now = new Date().getTime();
@@ -361,10 +369,10 @@ $(window).on('load', function(e) {
         var distance = countDownDate - now;
 
         // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
         $('#countdown').html(days + "d " + hours + "h "
@@ -377,5 +385,5 @@ $(window).on('load', function(e) {
         }
     }, 1000);
     
-})
+});
 
