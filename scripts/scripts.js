@@ -10,10 +10,6 @@ $(document).ready(function () {
     $('#loading-box').css({'transform' : 'translateY(50%)'});
     
     
-
-    
-
-    
 });
 
 
@@ -36,15 +32,15 @@ $(window).on("ready load resize", function () {
         
         if (imgWidth < imgHeight) {
             
-            $(this).css({'max-width' : '400px'});
+            $(this).css({'max-width' : '400px', 'height' : 'auto'});
             
         } else if (imgWidth > imgHeight) {
             
-            $(this).css({'max-width' : '100%'});
+            $(this).css({'max-width' : '100%', 'height' : 'auto'});
         
         } else if (imgWidth === imgHeight) {
 
-            $(this).css({'max-width' : '600px'});
+            $(this).css({'max-width' : '600px', 'height' : 'auto'});
         }
     });
     
@@ -67,7 +63,7 @@ $(window).on("ready load resize", function () {
             'bottom' : 'auto'
         });
         
-        console.log('This is not iOS');
+        console.log('This is iOS');
         
     } else if (footerHeight >= screenHeight) {
         

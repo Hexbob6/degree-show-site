@@ -888,6 +888,7 @@ blockquote {
     margin-top: 0;
     margin-bottom: 50px;
     width: 100%;
+    height: auto;
 }
 
 .video-wrapper {
