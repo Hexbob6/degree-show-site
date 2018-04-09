@@ -57,6 +57,7 @@ $(window).on("ready load resize", function () {
     // Checks if browser is Safari (iOS, OSX)
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
+    
     // Adjusts the footer so it scrolls on mobile
     if (isSafari) {
         
@@ -368,33 +369,6 @@ $(document).ready(function () {
     headerVideo.append('<video class="vertical-align" autoplay><source     src="vid/Course_Lines/' + leftHandLines  + '_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/' + leftHandLines + '_student_lines_left1.png">', '<video class="vertical-align" autoplay><source src="vid/Course_Lines/' + rightHandLines + '_page-lines-right_vid1.mp4" type="video/mp4"></video>' + '<img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/' + rightHandLines + '_student_lines_right1.png">');
     
     
-    
-//    switch(leftHandLines) {
-//            
-//        case "anim":
-//            studentSpecialsims.append(animSpecialism);
-//            break;
-//            
-//        case "illust":
-//            studentSpecialsims.append(illuSpecialism);
-//            break;
-//            
-//        case "cdme":
-//            studentSpecialsims.append(cdmeSpecialism);
-//            break;
-//            
-//        case "graphics":
-//            studentSpecialsims.append(gdesSpecialism);
-//            break;
-//                
-//        case "fine-art":
-//            studentSpecialsims.append(artSpecialism);
-//            break;
-//            
-//        default:
-//            break;
-//            
-//    }
     
     if (pageBody.hasClass('anim')) {
         studentSpecialsims.append(animSpecialism);
