@@ -67,6 +67,8 @@ $(window).on("ready load resize", function () {
             'bottom' : 'auto'
         });
         
+        console.log('This is not iOS');
+        
     } else if (footerHeight >= screenHeight) {
         
         $('main').css({'margin-bottom' : 0});
@@ -74,6 +76,7 @@ $(window).on("ready load resize", function () {
             'position' : 'relative',
             'bottom' : 'auto'
         });
+        console.log('This is not iOS');
         
     } else if (footerHeight < screenHeight) {
         
@@ -82,6 +85,8 @@ $(window).on("ready load resize", function () {
             'position' : 'fixed',
             'bottom' : '0'
         });
+        
+        console.log('This is not iOS');
         
     }
     
@@ -167,7 +172,7 @@ $(document).ready(function () {
         headerVideo = $('.student-header-video-wrapper'),
         studentSpecialsims = $('.student-specialisms');
     
-
+    
     var linesLeftCDME =
         '<video class="vertical-align" autoplay><source     src="vid/Course_Lines/CDME_page-lines-left_vid1.mp4" type="video/mp4"></video>' + '<img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/CDME_student_lines_left1.png">',
         linesRightCDME =
@@ -206,7 +211,7 @@ $(document).ready(function () {
     // - graphics
     // - fine-art
     
-    
+    /*
     // If body has only one class, do this, or if more than one class do this
     if (pageBody.hasClass('cdme') && pageBody[0].classList.length === 1) {
         
@@ -314,7 +319,105 @@ $(document).ready(function () {
         
         console.log("GDES ART");
         
+    } */
+    
+    
+    var courseList = ["cdme", "graphics", "anim", "illust", "fine-art"],
+        courseLongTitle = ["cdme", "graphics", "anim", "illust", "fine-art"],
+        i,
+        leftHandLines,
+        rightHandLines;
+    
+    
+    for (i = 0; i < courseList.length; i++) {
+        
+        if (pageBody.hasClass(courseList[i])) {
+            
+            leftHandLines = courseList[i];
+            
+            break;
+            
+        }
+        
+//        console.log(courseList[i]);
+        
+    }    
+    
+    for (i = 0; i < courseList.length; i++) {
+        
+        if (pageBody.hasClass(courseList[i]) && leftHandLines !== courseList[i]) {
+            
+            rightHandLines = courseList[i];
+            break;
+            
+        }
+        
+//        console.log(courseList[i]);
+        
     }
+    
+    if (!rightHandLines) {
+        
+        rightHandLines = leftHandLines;
+        
+    }
+    
+    console.log(rightHandLines);
+    console.log(leftHandLines);
+    
+    
+    headerVideo.append('<video class="vertical-align" autoplay><source     src="vid/Course_Lines/' + leftHandLines  + '_page-lines-left_vid1.mp4" type="video/mp4"></video><img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/' + leftHandLines + '_student_lines_left1.png">', '<video class="vertical-align" autoplay><source src="vid/Course_Lines/' + rightHandLines + '_page-lines-right_vid1.mp4" type="video/mp4"></video>' + '<img class="video-replacement-image vertical-align" src="img/brand_elements/course_line_images/' + rightHandLines + '_student_lines_right1.png">');
+    
+    
+    
+//    switch(leftHandLines) {
+//            
+//        case "anim":
+//            studentSpecialsims.append(animSpecialism);
+//            break;
+//            
+//        case "illust":
+//            studentSpecialsims.append(illuSpecialism);
+//            break;
+//            
+//        case "cdme":
+//            studentSpecialsims.append(cdmeSpecialism);
+//            break;
+//            
+//        case "graphics":
+//            studentSpecialsims.append(gdesSpecialism);
+//            break;
+//                
+//        case "fine-art":
+//            studentSpecialsims.append(artSpecialism);
+//            break;
+//            
+//        default:
+//            break;
+//            
+//    }
+    
+    if (pageBody.hasClass('anim')) {
+        studentSpecialsims.append(animSpecialism);
+    }
+    
+    if (pageBody.hasClass('illust')) {
+        studentSpecialsims.append(illuSpecialism);
+    }
+    
+    if (pageBody.hasClass('cdme')) {
+        studentSpecialsims.append(cdmeSpecialism);
+    }
+    
+    if (pageBody.hasClass('graphics')) {
+        studentSpecialsims.append(gdesSpecialism);
+    }
+    
+    if (pageBody.hasClass('fine-art')) {
+        studentSpecialsims.append(artSpecialism);
+    }
+    
+    
     
     
     // Mobile detection
