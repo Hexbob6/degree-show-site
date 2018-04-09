@@ -54,8 +54,11 @@ $(window).on("ready load resize", function () {
     var footerHeight = $('footer').height();
     
     
+    // Checks if browser is Safari (iOS, OSX)
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
     // Adjusts the footer so it scrolls on mobile
-    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+    if (isSafari) {
         
         $('main').css({'margin-bottom' : 0});
         $('footer').css({
